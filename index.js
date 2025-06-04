@@ -1,3 +1,5 @@
+import sum from './sum'
+
 
 document.getElementById('btn').addEventListener('click',()=>{
     let sumValue = sum(5,3)
