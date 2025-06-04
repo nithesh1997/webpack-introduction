@@ -1,8 +1,13 @@
-import { calculateSum } from './sum.js';
 import logo from './assets/download.jpg';
 import "./style/style.css"
 import "./style/style.scss"
 import "./fonts/DancingScript-Regular.ttf"
+
+
+ function calculateSum(a, b) {
+  return a + b;
+}
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,4 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-document.getElementById("logo").src = logo
+document.getElementById("logo").src = logo;
+
+
+ const navButton = document.getElementById("btn-explore");
+        navButton.addEventListener('click', () => {
+            window.location.href = "explore.html";
+        });
