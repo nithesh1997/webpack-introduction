@@ -8,6 +8,8 @@ body {
 
 h2 {
   color: #444;
+   font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
 }
 
 
