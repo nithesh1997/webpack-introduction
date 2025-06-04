@@ -1,6 +1,3 @@
-function sum(a,b){
-    return a+b;
+export function calculateSum(a, b) {
+  return a + b;
 }
-
-
-export default sum

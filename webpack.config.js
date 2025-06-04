@@ -4,6 +4,16 @@ module.exports = {
     entry: './index.js',
     output:{
         filename:'bundle.js',
-        path: path.resolve(__dirname, 'dist')
-    }
+        path: path.resolve(__dirname, 'dist'),
+        assetModuleFilename:"asset/[hash][ext]",
+        clean:true
+    },
+     module: {
+        rules: [
+        {
+            test: /\.(jpg|png|gif|svg)$/i,
+            type: 'asset/resource',
+        },
+        ],
+    },
 }
