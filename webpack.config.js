@@ -16,12 +16,16 @@ module.exports = {
         new HtmlPlugin({
             template:'./src/index.html',
             filename:"index.html",
-            chunks:['index']
+            chunks:['index'],
+            inject:'body',
+            minify:true
         }),
          new HtmlPlugin({
             template:'./src/explore.html',
             filename:"explore.html",
-            chunks:['explore']
+            chunks:['explore'],
+            inject:'body',
+            minify:true
         })
     ],
     module: {
