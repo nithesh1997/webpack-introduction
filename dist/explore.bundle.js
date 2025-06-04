@@ -100,13 +100,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/assets/images.jpg":
-/*!*******************************!*\
-  !*** ./src/assets/images.jpg ***!
-  \*******************************/
+/***/ "./src/assets/images/images.jpg":
+/*!**************************************!*\
+  !*** ./src/assets/images/images.jpg ***!
+  \**************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"asset/91beedee845eab466a4e.jpg\";\n\n//# sourceURL=webpack://webpack-demo/./src/assets/images.jpg?");
+eval("module.exports = __webpack_require__.p + \"asset/91beedee845eab466a4e.jpg\";\n\n//# sourceURL=webpack://webpack-demo/./src/assets/images/images.jpg?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("module.exports = __webpack_require__.p + \"asset/91beedee845eab466a4e.jpg\
   \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_explore_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/explore.css */ \"./src/style/explore.css\");\n/* harmony import */ var _assets_images_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images.jpg */ \"./src/assets/images.jpg\");\n\r\n\r\n\r\n    document.getElementById(\"explore-img\").src = _assets_images_jpg__WEBPACK_IMPORTED_MODULE_1__;\r\n\r\n    const navButton = document.getElementById(\"nav-button\");\r\n        navButton.addEventListener('click', () => {\r\n            window.location.href = \"index.html\";\r\n        });\r\n\r\n\n\n//# sourceURL=webpack://webpack-demo/./src/explore.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_explore_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/explore.css */ \"./src/style/explore.css\");\n/* harmony import */ var _assets_images_images_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/images/images.jpg */ \"./src/assets/images/images.jpg\");\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", () => {\r\n    const exploreImg = document.getElementById(\"explore-img\");\r\n    if (exploreImg) {\r\n        exploreImg.src = _assets_images_images_jpg__WEBPACK_IMPORTED_MODULE_1__;\r\n    }\r\n\r\n    const navButton = document.getElementById(\"nav-button\");\r\n    if (navButton) {\r\n        navButton.addEventListener('click', () => {\r\n            window.location.href = \"index.html\";\r\n        });\r\n    }\r\n});\r\n\n\n//# sourceURL=webpack://webpack-demo/./src/explore.js?");
 
 /***/ }),
 

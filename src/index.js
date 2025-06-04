@@ -1,7 +1,7 @@
-import logo from './assets/download.jpg';
+import logo from './assets/images/download.jpg';
 import "./style/style.css"
 import "./style/style.scss"
-import "./fonts/DancingScript-Regular.ttf"
+import "./assets/fonts/DancingScript-Regular.ttf"
 
 
  function calculateSum(a, b) {

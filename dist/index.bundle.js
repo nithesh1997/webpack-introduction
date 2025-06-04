@@ -110,23 +110,23 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/assets/download.jpg":
-/*!*********************************!*\
-  !*** ./src/assets/download.jpg ***!
-  \*********************************/
+/***/ "./src/assets/fonts/DancingScript-Regular.ttf":
+/*!****************************************************!*\
+  !*** ./src/assets/fonts/DancingScript-Regular.ttf ***!
+  \****************************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"asset/2e680650687dbdda9ed0.jpg\";\n\n//# sourceURL=webpack://webpack-demo/./src/assets/download.jpg?");
+eval("module.exports = __webpack_require__.p + \"asset/7e203cef1079837be7e0.ttf\";\n\n//# sourceURL=webpack://webpack-demo/./src/assets/fonts/DancingScript-Regular.ttf?");
 
 /***/ }),
 
-/***/ "./src/fonts/DancingScript-Regular.ttf":
-/*!*********************************************!*\
-  !*** ./src/fonts/DancingScript-Regular.ttf ***!
-  \*********************************************/
+/***/ "./src/assets/images/download.jpg":
+/*!****************************************!*\
+  !*** ./src/assets/images/download.jpg ***!
+  \****************************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"asset/7e203cef1079837be7e0.ttf\";\n\n//# sourceURL=webpack://webpack-demo/./src/fonts/DancingScript-Regular.ttf?");
+eval("module.exports = __webpack_require__.p + \"asset/2e680650687dbdda9ed0.jpg\";\n\n//# sourceURL=webpack://webpack-demo/./src/assets/images/download.jpg?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("module.exports = __webpack_require__.p + \"asset/7e203cef1079837be7e0.ttf\
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_download_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/download.jpg */ \"./src/assets/download.jpg\");\n/* harmony import */ var _style_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.css */ \"./src/style/style.css\");\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style/style.scss */ \"./src/style/style.scss\");\n/* harmony import */ var _fonts_DancingScript_Regular_ttf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fonts/DancingScript-Regular.ttf */ \"./src/fonts/DancingScript-Regular.ttf\");\n\r\n\r\n\r\n\r\n\r\n\r\n function calculateSum(a, b) {\r\n  return a + b;\r\n}\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  const btn = document.getElementById('btn');\r\n  const num1Input = document.getElementById('num1');\r\n  const num2Input = document.getElementById('num2');\r\n  const resultText = document.getElementById('text-result');\r\n\r\n  btn.addEventListener('click', () => {\r\n    const num1 = num1Input.value;\r\n    const num2 = num2Input.value;\r\n\r\n    if (isNaN(num1) || isNaN(num2)) {\r\n      resultText.textContent = 'Please enter valid numbers.';\r\n      resultText.style.color = 'red';\r\n    } else {\r\n      const result = calculateSum(num1, num2);\r\n      resultText.textContent = `Result: ${result}`;\r\n      resultText.style.color = 'green';\r\n    }\r\n  });\r\n});\r\n\r\n\r\ndocument.getElementById(\"logo\").src = _assets_download_jpg__WEBPACK_IMPORTED_MODULE_0__;\r\n\r\n\r\n const navButton = document.getElementById(\"btn-explore\");\r\n        navButton.addEventListener('click', () => {\r\n            window.location.href = \"explore.html\";\r\n        });\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_images_download_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/images/download.jpg */ \"./src/assets/images/download.jpg\");\n/* harmony import */ var _style_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/style.css */ \"./src/style/style.css\");\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style/style.scss */ \"./src/style/style.scss\");\n/* harmony import */ var _assets_fonts_DancingScript_Regular_ttf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/fonts/DancingScript-Regular.ttf */ \"./src/assets/fonts/DancingScript-Regular.ttf\");\n\r\n\r\n\r\n\r\n\r\n\r\n function calculateSum(a, b) {\r\n  return a + b;\r\n}\r\n\r\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n  const btn = document.getElementById('btn');\r\n  const num1Input = document.getElementById('num1');\r\n  const num2Input = document.getElementById('num2');\r\n  const resultText = document.getElementById('text-result');\r\n\r\n  btn.addEventListener('click', () => {\r\n    const num1 = num1Input.value;\r\n    const num2 = num2Input.value;\r\n\r\n    if (isNaN(num1) || isNaN(num2)) {\r\n      resultText.textContent = 'Please enter valid numbers.';\r\n      resultText.style.color = 'red';\r\n    } else {\r\n      const result = calculateSum(num1, num2);\r\n      resultText.textContent = `Result: ${result}`;\r\n      resultText.style.color = 'green';\r\n    }\r\n  });\r\n});\r\n\r\n\r\ndocument.getElementById(\"logo\").src = _assets_images_download_jpg__WEBPACK_IMPORTED_MODULE_0__;\r\n\r\n\r\n const navButton = document.getElementById(\"btn-explore\");\r\n        navButton.addEventListener('click', () => {\r\n            window.location.href = \"explore.html\";\r\n        });\n\n//# sourceURL=webpack://webpack-demo/./src/index.js?");
 
 /***/ }),
 

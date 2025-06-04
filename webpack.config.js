@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -26,6 +27,18 @@ module.exports = {
             chunks:['explore'],
             inject:'body',
             minify:true
+        }),
+        new CopyPlugin({
+            patterns:[
+                {
+                    from:path.resolve(__dirname, "src/assets/images"),
+                    to:path.resolve(__dirname, "dist", "assets/images")
+                },
+                 {
+                    from:path.resolve(__dirname, "src/assets/fonts"),
+                    to:path.resolve(__dirname, "dist", "assets/fonts")
+                }
+            ]
         })
     ],
     module: {
