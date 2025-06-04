@@ -1,0 +1,39 @@
+// Variables
+$input-padding: 5px;
+$input-margin: 10px;
+$input-width: 100px;
+
+$button-padding: 8px 16px;
+$button-bg: #4CAF50;
+$button-hover-bg: #45a049;
+$button-color: white;
+$button-border: none;
+$button-font-weight: bold;
+$button-margin-top: 10px;
+
+$label-margin-right: 10px;
+
+// Styles
+label {
+  margin-right: $label-margin-right;
+}
+
+input[type="number"] {
+  padding: $input-padding;
+  margin: $input-margin;
+  width: $input-width;
+}
+
+button {
+  padding: $button-padding;
+  background-color: $button-bg;
+  color: $button-color;
+  border: $button-border;
+  cursor: pointer;
+  font-weight: $button-font-weight;
+  margin-top: $button-margin-top;
+
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+}

@@ -10,29 +10,7 @@ h2 {
   color: #444;
 }
 
-label {
-  margin-right: 10px;
-}
 
-input[type="number"] {
-  padding: 5px;
-  margin: 10px;
-  width: 100px;
-}
-
-button {
-  padding: 8px 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #45a049;
-}
 
 #text-result {
   margin-top: 20px;

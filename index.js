@@ -1,6 +1,7 @@
 import { calculateSum } from './sum.js';
 import logo from './assets/download.jpg';
 import "./style/style.css"
+import "./style/style.scss"
 
 
 document.addEventListener('DOMContentLoaded', () => {
