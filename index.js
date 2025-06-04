@@ -1,5 +1,7 @@
 import { calculateSum } from './sum.js';
-import logo from './assets/download.jpg'
+import logo from './assets/download.jpg';
+import "./style/style.css"
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('btn');
