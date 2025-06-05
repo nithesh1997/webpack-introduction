@@ -1,11 +1,17 @@
 const path = require('path');
+const glob = require('glob');
 const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const {PurgeCSSPlugin} = require('purgecss-webpack-plugin')
+
+const PATHS = {
+    src: path.join(__dirname, 'src')
+}
 
 module.exports = {
-    mode:"production",
+    mode: "production",
     entry: {
         index: "./src/index.js",
         explore: './src/explore.js'
@@ -16,41 +22,44 @@ module.exports = {
         assetModuleFilename: "asset/[hash][ext]",
         clean: true
     },
-    optimization:{
-        minimizer:[
+    optimization: {
+        minimizer: [
             `...`,
             new CssMinimizerPlugin()
         ]
     },
-    plugins:[
-        new HtmlPlugin({
-            template:'./src/index.html',
-            filename:"index.html",
-            chunks:['index'],
-            inject:'body',
-            minify:true
-        }),
-         new HtmlPlugin({
-            template:'./src/explore.html',
-            filename:"explore.html",
-            chunks:['explore'],
-            inject:'body',
-            minify:true
-        }),
-        new CopyPlugin({
-            patterns:[
-                {
-                    from:path.resolve(__dirname, "src/assets/images"),
-                    to:path.resolve(__dirname, "dist", "assets/images")
-                },
-                 {
-                    from:path.resolve(__dirname, "src/assets/fonts"),
-                    to:path.resolve(__dirname, "dist", "assets/fonts")
-                }
-            ]
+    plugins: [
+        new PurgeCSSPlugin({
+            paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true })
         }),
         new MiniCssExtractPlugin({
-            filename:"[name].[contenthash].css"
+            filename: "[name].[contenthash].css"
+        }),
+        new HtmlPlugin({
+            template: './src/index.html',
+            filename: "index.html",
+            chunks: ['index'],
+            inject: 'body',
+            minify: true
+        }),
+        new HtmlPlugin({
+            template: './src/explore.html',
+            filename: "explore.html",
+            chunks: ['explore'],
+            inject: 'body',
+            minify: true
+        }),
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src/assets/images"),
+                    to: path.resolve(__dirname, "dist", "assets/images")
+                },
+                {
+                    from: path.resolve(__dirname, "src/assets/fonts"),
+                    to: path.resolve(__dirname, "dist", "assets/fonts")
+                }
+            ]
         })
     ],
     module: {
