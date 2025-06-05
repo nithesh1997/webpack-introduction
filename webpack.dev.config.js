@@ -19,6 +19,11 @@ module.exports = {
     devServer: {
         port: 3000
     },
+    optimization: {
+        splitChunks:{
+            chunks:'all'
+        }
+    },
     plugins: [
         new BundleAnalyzerPlugin(),
         new MiniCssExtractPlugin({
