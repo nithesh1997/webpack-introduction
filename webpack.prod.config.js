@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
     mode:"production",
@@ -14,6 +15,12 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: "asset/[hash][ext]",
         clean: true
+    },
+    optimization:{
+        minimizer:[
+            `...`,
+            new CssMinimizerPlugin()
+        ]
     },
     plugins:[
         new HtmlPlugin({
