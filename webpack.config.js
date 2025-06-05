@@ -14,6 +14,9 @@ module.exports = {
         assetModuleFilename: "asset/[hash][ext]",
         clean: true
     },
+    devServer:{
+        port:3000
+    },
     plugins:[
         new HtmlPlugin({
             template:'./src/index.html',
