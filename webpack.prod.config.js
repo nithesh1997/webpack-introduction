@@ -17,7 +17,7 @@ module.exports = {
         explore: './src/explore.js'
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: "asset/[hash][ext]",
         clean: true
@@ -37,14 +37,14 @@ module.exports = {
         }),
         new HtmlPlugin({
             template: './src/index.html',
-            filename: "index.html",
+            filename: "index.[contenthash].html",
             chunks: ['index'],
             inject: 'body',
             minify: true
         }),
         new HtmlPlugin({
             template: './src/explore.html',
-            filename: "explore.html",
+            filename: "explore.[contenthash].html",
             chunks: ['explore'],
             inject: 'body',
             minify: true
