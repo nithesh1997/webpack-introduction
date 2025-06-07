@@ -1,4 +1,3 @@
-import _ from 'lodash';
 import dayjs from 'dayjs';
 import logo from './assets/images/download.jpg';
 import "./style/style.css";
@@ -45,15 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Time check element with Lodash debounce and Day.js
+  // Show current time using Lodash debounce on button click
   const timeCheckElement = document.getElementById("time-check");
-  if (timeCheckElement) {
-    const updateTime = _.debounce(() => {
-      const currentTime = dayjs().format("YYYY-MM-DD HH:mm:ss");
-      timeCheckElement.textContent = `Current Time: ${currentTime}`;
-      timeCheckElement.style.color = "#007acc";
-    }, 300);
+  const showTimeButton = document.getElementById("btn-time");
 
-    updateTime()
+  if (timeCheckElement && showTimeButton) {
+    showTimeButton.addEventListener("click", () => {
+      import('lodash').then(({ default: _ }) => {
+        const updateTime = _.debounce(() => {
+          const currentTime = dayjs().format("YYYY-MM-DD HH:mm:ss");
+          timeCheckElement.textContent = `Current Time: ${currentTime}`;
+          timeCheckElement.style.color = "#007acc";
+        }, 300);
+
+        updateTime(); // Call the function once immediately
+      });
+    });
   }
 });
