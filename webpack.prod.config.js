@@ -22,6 +22,7 @@ module.exports = {
         assetModuleFilename: "asset/[hash][ext]",
         clean: true
     },
+    devtool:"source-map",
     optimization: {
         minimizer: [
             `...`,
